@@ -1,14 +1,37 @@
 import React from "react";
 //import logo from "./logo.svg";
 import "./App.css";
+import { Switch, Route } from "react-router-dom";
 import Home from "../src/Pages/Home";
+import Signin from "../src/Pages/Signin";
+import Signup from "../src/Pages/Signup";
+import Particles from "react-particles-js";
 
-function App() {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
+const particlesOptions = {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+  },
+};
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Particles className="particles" params={particlesOptions} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/signin" component={Signin} />
+          <Route path="/signup" component={Signup} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
