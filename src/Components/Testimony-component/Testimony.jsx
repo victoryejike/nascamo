@@ -5,7 +5,7 @@ import Testimonies from "../Testimonies-component/Testimonies";
 const Testimony = () => {
   return (
     <div>
-      <Avatars />;
+      <Avatars />
       <Testimonies />
     </div>
   );
