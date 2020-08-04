@@ -3,6 +3,8 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Home from "../src/Pages/Home";
+import Blog from "../src/Pages/Blog";
+import ScamCatalogue from "../src/Pages/ScamCatalogue";
 import Signin from "../src/Pages/Signin";
 import Signup from "../src/Pages/Signup";
 import Particles from "react-particles-js";
@@ -28,6 +30,8 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/scamcatalogue" component={ScamCatalogue} />
         </Switch>
       </div>
     );
