@@ -1,15 +1,17 @@
 import React from "react";
+import "./Testimony.css";
 
 const Testimony = (props) => {
   const { image, testimony, author } = props;
   return (
-    <div className="testimony">
-      <p>
+    <div>
+      <p className="testimony">
         {image}
         <br></br>
-        {testimony}
-        <br></br>
-        <span>--{author}</span>
+        <blockquote>
+          <p>{testimony}</p>
+          <cite>--{author}</cite>
+        </blockquote>
       </p>
     </div>
   );
