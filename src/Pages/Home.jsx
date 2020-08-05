@@ -1,13 +1,15 @@
 import React from "react";
 import Navbar from "../Components/Navbar-component/Navbar";
-import Testimony from "../Components/Testimony-component/Testimony";
+import Testimonies from "../Components/Testimonies-component/Testimonies";
+import AboutInfo from "../Components/AboutInfo-component/About";
 
 class Home extends React.Component {
   render() {
     return (
       <div>
         <Navbar />
-        <Testimony />
+        <AboutInfo />
+        <Testimonies />
       </div>
     );
   }

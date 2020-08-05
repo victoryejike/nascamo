@@ -1,12 +1,16 @@
 import React from "react";
-import Avatars from "../Avatar-component/Avatar";
-import Testimonies from "../Testimonies-component/Testimonies";
 
-const Testimony = () => {
+const Testimony = (props) => {
+  const { image, testimony, author } = props;
   return (
-    <div>
-      <Avatars />
-      <Testimonies />
+    <div className="testimony">
+      <p>
+        {image}
+        <br></br>
+        {testimony}
+        <br></br>
+        <span>--{author}</span>
+      </p>
     </div>
   );
 };

@@ -5,8 +5,8 @@ import { Switch, Route } from "react-router-dom";
 import Home from "../src/Pages/Home";
 import Blog from "../src/Pages/Blog";
 import ScamCatalogue from "../src/Pages/ScamCatalogue";
-import Signin from "../src/Pages/Signin";
-import Signup from "../src/Pages/Signup";
+import Signin from "../src/Pages/Signin-page/Signin";
+import Signup from "./Pages/Signup-page/Signup";
 import Particles from "react-particles-js";
 
 const particlesOptions = {

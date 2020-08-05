@@ -1,13 +1,8 @@
-/* .App {
-  display: flex;
-  text-align: center;
-} */
-
 .particles {
-  position: fixed; /* position fixed to the viewport */
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1; /* elements with z-index of -1 will be displayed behind others */
+  z-index: -1;
 }

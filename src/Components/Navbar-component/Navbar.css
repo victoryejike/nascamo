@@ -1,5 +1,6 @@
 .navbarContainer {
   display: flex;
+  background-color: aliceblue;
 }
 
 .users {
@@ -18,4 +19,9 @@ li {
 a {
   text-decoration: none;
   padding-left: 20px;
+  color: black;
+}
+
+a:hover {
+  color: green;
 }
