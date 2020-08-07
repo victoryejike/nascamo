@@ -7,7 +7,7 @@ import Blog from "../src/Pages/Blog-page/Blog";
 import ScamCatalogue from "./Pages/ScamCatalogue-page/ScamCatalogue";
 import Signin from "../src/Pages/Signin-page/Signin";
 import Signup from "./Pages/Signup-page/Signup";
-import Loader from "../src/Components/Loader-component/Loader";
+//import Loader from "../src/Components/Loader-component/Loader";
 //import Particles from "react-particles-js";
 
 // const particlesOptions = {

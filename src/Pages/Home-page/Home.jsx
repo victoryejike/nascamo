@@ -1,7 +1,9 @@
 import React from "react";
 import Navbar from "../../Components/Navbar-component/Navbar";
 //import Testimonies from "../../Components/Testimonies-component/Testimonies";
-import AboutInfo from "../../Components/AboutInfo-component/About";
+import Poster from "../../Components/Poster-component/Poster";
+import About from "../../Components/About-component/About";
+import Footer from "../../Components/Footer-component/Footer";
 import "./Home.css";
 
 class Home extends React.Component {
@@ -9,8 +11,10 @@ class Home extends React.Component {
     return (
       <div className="home">
         <Navbar />
-        <AboutInfo />
+        <Poster />
+        <About />
         {/* <Testimonies /> */}
+        <Footer />
       </div>
     );
   }
