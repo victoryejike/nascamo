@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+}
+
+.catalogue {
+  flex: 5;
+}

@@ -1,17 +1,19 @@
 import React from "react";
+//import { Link } from "react-router-dom";
 //import "./Testimony.css";
 
 const BlogItem = (props) => {
   const { image, category, article, author } = props;
   return (
     <div>
-      <p className="testy">
-        {image}
+      <div className="testy">
+        <div style={{ alignContent: "center" }}>{image}</div>
         <br></br>
         <p>{article}</p>
         <p>Category: {category}</p>
         <cite>--{author}</cite>
-      </p>
+      </div>
+      <br></br>
     </div>
   );
 };

@@ -1,0 +1,8 @@
+.home {
+  /* background-color: black; */
+  background-image: url("../../assets/homeBackground2.jpg");
+  background-position: top;
+  background-repeat: repeat;
+  height: 695px;
+  background-size: cover;
+}

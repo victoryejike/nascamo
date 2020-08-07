@@ -1,0 +1,20 @@
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.blogPost2 {
+  align-items: center;
+}
+
+.blog {
+  align-content: center;
+}
+
+.blogName {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  background-color: #095a3c;
+}

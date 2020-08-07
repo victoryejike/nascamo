@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "../Components/Navbar-component/Navbar";
-import BlogItem from "../Components/BlogItem-component/BlogItem";
+import Navbar from "../../Components/Navbar-component/Navbar";
+import BlogItem from "../../Components/BlogItem-component/BlogItem";
+import "./Blog.css";
 
 class Blog extends React.Component {
   constructor(props) {
@@ -13,15 +14,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="100px"
-              height="100px"
+              width="400px"
+              height="400px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum \
-              computer, a powerful cpu machine that relies on subatomic particles instead \
-              of transistors.",
+            "The tech giant says it is ready to begin planning a quantum.",
           postCategory: "Text Message",
           postAuthor: "Stanley",
         },
@@ -31,15 +30,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="100px"
-              height="100px"
+              width="400px"
+              height="400px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum \
-              computer, a powerful cpu machine that relies on subatomic particles instead \
-              of transistors.",
+            "The tech giant says it is ready to begin planning a quantum.",
           postCategory: "Whatsapp",
           postAuthor: "Erica",
         },
@@ -49,15 +46,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="100px"
-              height="100px"
+              width="400px"
+              height="400px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum \
-              computer, a powerful cpu machine that relies on subatomic particles instead \
-              of transistors.",
+            "The tech giant says it is ready to begin planning a quantum.",
           postCategory: "Email",
           postAuthor: "TolaniBaj",
         },
@@ -67,15 +62,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="100px"
-              height="100px"
+              width="400px"
+              height="400px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum \
-              computer, a powerful cpu machine that relies on subatomic particles instead \
-              of transistors.",
+            "The tech giant says it is ready to begin planning a quantum.",
           postCategory: "Phone Call",
           postAuthor: "Kennedy",
         },
@@ -85,15 +78,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="100px"
-              height="100px"
+              width="400px"
+              height="400px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum \
-              computer, a powerful cpu machine that relies on subatomic particles instead \
-              of transistors.",
+            "The tech giant says it is ready to begin planning a quantum .",
           postCategory: "Cryptos",
           postAuthor: "Stanley",
         },
@@ -103,15 +94,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="100px"
-              height="100px"
+              width="400px"
+              height="400px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum \
-              computer, a powerful cpu machine that relies on subatomic particles instead \
-              of transistors.",
+            "The tech giant says it is ready to begin planning a quantum.",
           postCategory: "Cryptos",
           postAuthor: "Sandro Willy",
         },
@@ -122,14 +111,20 @@ class Blog extends React.Component {
     return (
       <div>
         <Navbar />
-        {this.state.blogItems.map((blogItem) => (
-          <BlogItem
-            image={blogItem.postImage}
-            article={blogItem.postBody}
-            category={blogItem.postCategory}
-            author={blogItem.postAuthor}
-          />
-        ))}
+        <p className="blogName">Blog</p>
+        <div className="container2">
+          {this.state.blogItems.map((blogItem) => (
+            <div className="blogPost2">
+              <BlogItem
+                className="blog"
+                image={blogItem.postImage}
+                article={blogItem.postBody}
+                category={blogItem.postCategory}
+                author={blogItem.postAuthor}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

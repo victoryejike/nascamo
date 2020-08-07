@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+/* .input {
+  backgroundcolor: black;
+  height: 50;
+  width: 400;
+  border: 1px solid rgb(255, 94, 0);
+  borderradius: 100;
+} */
+
+input:empty {
+  background-color: black;
+}
+
+input:placeholder-shown {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+button {
+  background-color: red;
+  border: 1px solid white;
+  color: white;
+  outline: none;
+  height: 49px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}

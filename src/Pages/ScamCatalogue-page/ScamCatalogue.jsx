@@ -1,11 +1,12 @@
 import React from "react";
-import Navbar from "../Components/Navbar-component/Navbar";
-import CatalogueItem from "../Components/CatalogueItem-component/CatalogueItem";
-import Cryptos from "../assets/cryptos.jpg";
-import TextMesaage from "../assets/textMessage.jpg";
-import PhoneCall from "../assets/phoneCall.jpg";
-import Whatsapp from "../assets/whatsapp.jpg";
-import Email from "../assets/email.jpg";
+import Navbar from "../../Components/Navbar-component/Navbar";
+import CatalogueItem from "../../Components/CatalogueItem-component/CatalogueItem";
+import Cryptos from "../../assets/cryptos.jpg";
+import TextMesaage from "../../assets/textMessage.jpg";
+import PhoneCall from "../../assets/phoneCall.jpg";
+import Whatsapp from "../../assets/whatsapp.jpg";
+import Email from "../../assets/email.jpg";
+import "./ScamCatalogue.css";
 
 class ScamCatalogue extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class ScamCatalogue extends React.Component {
               src={TextMesaage}
               alt="message scam"
               width="160px"
-              height="130px"
+              height="160px"
             />
           ),
           imageText: "Text Message",
@@ -26,7 +27,7 @@ class ScamCatalogue extends React.Component {
         },
         {
           image: (
-            <img src={Email} alt="email scam" width="120px" height="130px" />
+            <img src={Email} alt="email scam" width="200px" height="160px" />
           ),
           imageText: "Email",
           articleCount: 6,
@@ -37,7 +38,7 @@ class ScamCatalogue extends React.Component {
               src={Whatsapp}
               alt="whatsapp scam"
               width="160px"
-              height="130px"
+              height="160px"
             />
           ),
           imageText: "Whatsapp",
@@ -49,7 +50,7 @@ class ScamCatalogue extends React.Component {
               src={Cryptos}
               alt="cryptocurrency scam"
               width="160px"
-              height="130px"
+              height="160px"
             />
           ),
           imageText: "Cryptos",
@@ -61,7 +62,7 @@ class ScamCatalogue extends React.Component {
               src={PhoneCall}
               alt="phone Call scam"
               width="160px"
-              height="130px"
+              height="160px"
             />
           ),
           imageText: "Phone",
@@ -74,13 +75,18 @@ class ScamCatalogue extends React.Component {
     return (
       <div>
         <Navbar />
-        {this.state.catalogueItems.map((catalogueItem) => (
-          <CatalogueItem
-            image={catalogueItem.image}
-            category={catalogueItem.imageText}
-            numberOfArticles={catalogueItem.articleCount}
-          />
-        ))}
+        <p className="catalogueName">Our Catalogue</p>
+        <div className="container">
+          {this.state.catalogueItems.map((catalogueItem) => (
+            <div className="catalogue">
+              <CatalogueItem
+                image={catalogueItem.image}
+                category={catalogueItem.imageText}
+                numberOfArticles={catalogueItem.articleCount}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

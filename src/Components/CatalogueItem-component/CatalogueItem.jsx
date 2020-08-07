@@ -1,16 +1,14 @@
 import React from "react";
-//import "./Testimony.css";
+//import "./CatalogueItem.css";
 
 const CatalogueItem = (props) => {
   const { image, category, numberOfArticles } = props;
   return (
     <div>
-      <p className="testy">
-        {image}
-        <br></br>
-        <p>Category: {category}</p>
-        <p>{numberOfArticles}</p>
-      </p>
+      {image}
+      <br></br>
+      <p>Category: {category}</p>
+      <p>Article Number: {numberOfArticles}</p>
     </div>
   );
 };

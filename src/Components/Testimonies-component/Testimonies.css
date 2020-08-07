@@ -2,8 +2,8 @@
   font-size: 30px;
   text-align: center;
   padding: 20px;
-  background-color: green;
-  background-image: linear-gradient(to bottom right, #137752, aliceblue);
+  /* background-color: green; */
+  /* background-image: linear-gradient(to bottom right, #137752, aliceblue); */
 }
 
 .testimoniesBgColor:hover {

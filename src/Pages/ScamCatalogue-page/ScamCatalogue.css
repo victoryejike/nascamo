@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.catalogue {
+  padding-left: 40px;
+  flex: 1;
+}
+
+.catalogueName {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  background-color: #095a3c;
+}
