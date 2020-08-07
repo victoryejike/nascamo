@@ -22,9 +22,14 @@ const About = () => {
         placeholder="Search our extensive catalogue"
       />
       <button className=" no-underline grow pv2 ph3 dib mr3">Search</button>
-      {/* <p style={{ color: "white" }} className="fw1 f5 mt0 mb3">
-        Sign up to be up to date with their latest techniques.
-      </p> */}
+
+      {/* <p className=" fw1 f5 mt0 mb3">OR</p> */}
+      <div className="uploadButton">
+        <button className="but1 no-underline grow pv2 ph3 dib mr3">
+          Upload Scam
+        </button>
+      </div>
+
       <div>
         {/* <Link
           className="f6 br-pill bg-dark-green no-underline washed-green ba b--dark-green grow pv2 ph3 dib mr3"

@@ -23,6 +23,16 @@ input:placeholder-shown {
   font-weight: 400;
 }
 
+.but1 {
+  width: 200px;
+  outline: none;
+  border-radius: 22px;
+}
+
+.uploadButton {
+  padding-top: 10px;
+}
+
 button {
   background-color: red;
   border: 1px solid white;
@@ -31,4 +41,5 @@ button {
   height: 49px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  width: 100px;
 }
