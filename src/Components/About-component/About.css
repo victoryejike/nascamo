@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-.AboutUs {
-  padding-top: 300px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+
+/*Hide info of no checked inputs*/
+.tabs__content input:not(:checked) ~ .tabs__content__info {
+  display: none;
 }
 
-.AboutImage {
+/* .AboutUs {
+  align-items: center;
+} */
+
+/* .AboutImage {
   width: 30%;
   justify-content: space-between;
   background-image: url("../../assets/About/Services.jpg");
@@ -15,13 +18,27 @@
   background-size: cover;
   height: 700px;
   width: 500px;
+} */
+
+.aboutHeader {
+  padding-top: 250px;
+  text-align: center;
+  font-size: 30px;
+  color: black;
 }
 
-h2,
-p {
+label.text {
+  color: rgb(255, 94, 0);
+}
+
+.padbottom {
+  padding-bottom: 30px;
+}
+
+.text {
   font-family: "Montserrat", sans-serif;
   font-weight: 400px;
-  color: red;
+  color: black;
 }
 /* .AboutImage {
   background-image: url("../../assets/About/AboutUs5.jpg");

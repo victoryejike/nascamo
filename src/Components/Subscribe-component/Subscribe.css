@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.subscribeBackground {
+  background-color: white;
+}
+
+.subscribe {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400px;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+}
+
+.line {
+  margin: 20px;
+  color: red;
+}
