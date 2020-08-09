@@ -14,9 +14,13 @@ h1 {
   borderradius: 100;
 } */
 
-input:empty {
+/* input:empty {
   background-color: black;
 }
+
+input:hover {
+  background-color: white;
+} */
 
 input:placeholder-shown {
   font-family: "Montserrat", sans-serif;

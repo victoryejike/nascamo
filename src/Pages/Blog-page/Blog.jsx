@@ -1,6 +1,8 @@
 import React from "react";
-import Navbar from "../../Components/Navbar-component/Navbar";
+import Header from "../../Components/Header-component/Header";
 import BlogItem from "../../Components/BlogItem-component/BlogItem";
+import Subscribe from "../../Components/Subscribe-component/Subscribe";
+import Footer from "../../Components/Footer-component/Footer";
 import "./Blog.css";
 
 class Blog extends React.Component {
@@ -14,13 +16,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="400px"
-              height="400px"
+              width="200px"
+              height="200px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum.",
+            "The tech giant says it is ready to begin.",
           postCategory: "Text Message",
           postAuthor: "Stanley",
         },
@@ -30,13 +32,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="400px"
-              height="400px"
+              width="200px"
+              height="200px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum.",
+            "The tech giant says it is ready to begin",
           postCategory: "Whatsapp",
           postAuthor: "Erica",
         },
@@ -46,13 +48,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="400px"
-              height="400px"
+              width="200px"
+              height="200px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum.",
+            "The tech giant says it is ready to begin.",
           postCategory: "Email",
           postAuthor: "TolaniBaj",
         },
@@ -62,13 +64,13 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="400px"
-              height="400px"
+              width="200px"
+              height="200px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum.",
+            "The tech giant says it is ready to begin.",
           postCategory: "Phone Call",
           postAuthor: "Kennedy",
         },
@@ -78,13 +80,29 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="400px"
-              height="400px"
+              width="200px"
+              height="200px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum .",
+            "The tech giant says it is ready to begin .",
+          postCategory: "Cryptos",
+          postAuthor: "Stanley",
+        },
+        {
+          id: 5,
+          postImage: (
+            <img
+              src="http://mrmrs.github.io/photos/cpu.jpg"
+              alt="firstblogpost"
+              width="200px"
+              height="200px"
+            />
+          ),
+          postBody:
+            // eslint-disable-next-line
+            "The tech giant says it is ready to begin.",
           postCategory: "Cryptos",
           postAuthor: "Stanley",
         },
@@ -94,13 +112,29 @@ class Blog extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="firstblogpost"
-              width="400px"
-              height="400px"
+              width="200px"
+              height="200px"
             />
           ),
           postBody:
             // eslint-disable-next-line
-            "The tech giant says it is ready to begin planning a quantum.",
+            "The tech giant says it is ready to begin.",
+          postCategory: "Cryptos",
+          postAuthor: "Stanley",
+        },
+        {
+          id: 7,
+          postImage: (
+            <img
+              src="http://mrmrs.github.io/photos/cpu.jpg"
+              alt="firstblogpost"
+              width="200px"
+              height="200px"
+            />
+          ),
+          postBody:
+            // eslint-disable-next-line
+            "The tech giant says it is ready to begin",
           postCategory: "Cryptos",
           postAuthor: "Sandro Willy",
         },
@@ -110,7 +144,7 @@ class Blog extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Header />
         <p className="blogName">Blog</p>
         <div className="container2">
           {this.state.blogItems.map((blogItem) => (
@@ -125,6 +159,8 @@ class Blog extends React.Component {
             </div>
           ))}
         </div>
+        <Subscribe />
+        <Footer />
       </div>
     );
   }

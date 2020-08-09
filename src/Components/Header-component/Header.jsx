@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //import { ReactComponent as Logo } from "../../assets/scam-alert.svg";
-import "./Navbar.css";
+import SearchBox from "../SearchBox-component/SearchBox";
+import "./Header.css";
 
-const Navbar = () => {
+const Header = () => {
   return (
-    <div className="navbarContainer">
+    <div className="headerContainer">
       <div className="users">
         <nav>
           <ul>
@@ -22,8 +23,11 @@ const Navbar = () => {
         </nav>
       </div>
       <div>
-        <nav className="navaccessLinks">
+        <nav className="accessLinks">
           <ul>
+            <li>
+              <SearchBox />
+            </li>
             <li>
               <Link to="/signin">sign in</Link>
             </li>
@@ -37,4 +41,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

@@ -6,11 +6,11 @@
   padding: 10;
   padding-left: 100;
 }
-.navbarContainer {
+.headerContainer {
   display: flex;
   justify-content: space-between;
-  /* background-color: rgb(255, 94, 0); */
-  /*   */
+  background-color: black;
+  /*  
 
   /* background-color: aliceblue; */
 
@@ -18,9 +18,9 @@
   background-color: white; */
 }
 
-.users {
-  flex-grow: 9;
-}
+/* .users {
+  flex-grow: 4;
+} */
 
 /* .logo {
   flex-grow: 1;
@@ -31,21 +31,15 @@ li {
   text-decoration: none;
 }
 
-a {
+ul {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 15px;
   text-decoration: none;
   padding-left: 20px;
-  color: white;
-  transition: 2s;
+  color: rgb(255, 94, 0);
 }
 
-.navaccessLinks {
+.accessLinks {
   padding-right: 20px;
-}
-
-a:hover {
-  color: rgb(254, 94, 0);
-  /* height: 200px; */
 }

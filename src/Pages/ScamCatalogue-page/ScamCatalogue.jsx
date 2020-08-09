@@ -1,6 +1,8 @@
 import React from "react";
-import Navbar from "../../Components/Navbar-component/Navbar";
+import Header from "../../Components/Header-component/Header";
 import CatalogueItem from "../../Components/CatalogueItem-component/CatalogueItem";
+import Subscribe from "../../Components/Subscribe-component/Subscribe";
+import Footer from "../../Components/Footer-component/Footer";
 import Cryptos from "../../assets/cryptos.jpg";
 import TextMesaage from "../../assets/textMessage.jpg";
 import PhoneCall from "../../assets/phoneCall.jpg";
@@ -74,7 +76,7 @@ class ScamCatalogue extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Header />
         <p className="catalogueName">Our Catalogue</p>
         <div className="container">
           {this.state.catalogueItems.map((catalogueItem) => (
@@ -87,6 +89,8 @@ class ScamCatalogue extends React.Component {
             </div>
           ))}
         </div>
+        <Subscribe />
+        <Footer />
       </div>
     );
   }

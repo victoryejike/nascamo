@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "../../Components/Navbar-component/Navbar";
+import Header from "../../Components/Header-component/Header";
+import Footer from "../../Components/Footer-component/Footer";
+import Subscribe from "../../Components/Subscribe-component/Subscribe";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
     <div>
       <div>
-        <Navbar />
+        <Header />
       </div>
 
       <div>
@@ -15,7 +17,11 @@ const Signup = () => {
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
               <legend className="f4 fw6 ph0 mh0">Sign Up</legend>
               <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="email-address">
+                <label
+                  style={{ color: "rgb(255, 94, 0)" }}
+                  className="db fw6 lh-copy f6"
+                  htmlFor="email-address"
+                >
                   Email
                 </label>
                 <input
@@ -26,7 +32,11 @@ const Signup = () => {
                 />
               </div>
               <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="name">
+                <label
+                  style={{ color: "rgb(255, 94, 0)" }}
+                  className="db fw6 lh-copy f6"
+                  htmlFor="name"
+                >
                   Username
                 </label>
                 <input
@@ -37,7 +47,11 @@ const Signup = () => {
                 />
               </div>
               <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="password">
+                <label
+                  style={{ color: "rgb(255, 94, 0)" }}
+                  className="db fw6 lh-copy f6"
+                  htmlFor="password"
+                >
                   Password
                 </label>
                 <input
@@ -53,6 +67,7 @@ const Signup = () => {
             </fieldset>
             <div className>
               <input
+                style={{ backgroundColor: "rgb(255, 94, 0)", color: "white" }}
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
                 defaultValue="Sign up"
@@ -69,6 +84,8 @@ const Signup = () => {
           </form>
         </main>
       </div>
+      <Subscribe />
+      <Footer />
     </div>
   );
 };

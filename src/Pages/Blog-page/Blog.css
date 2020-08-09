@@ -5,16 +5,16 @@
 }
 
 .blogPost2 {
-  align-items: center;
+  align-items: flex-start;
 }
 
 .blog {
-  align-content: center;
+  align-content: left;
+  /* flex-grow: 3; */
 }
 
 .blogName {
-  padding: 20px;
+  color: rgb(255, 94, 0);
   text-align: center;
   font-size: 30px;
-  background-color: #095a3c;
 }

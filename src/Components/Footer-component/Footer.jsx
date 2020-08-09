@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <footer className="pa4 pa5-l black-70 bt b--black-10">
-        <h1 className=" fl w-100 pv0 f6 fw6 ttu tracked mb4">Contact Us</h1>
+        <h1 className="color fl w-100 pv0 f6 fw6 ttu tracked mb4">
+          Contact Us
+        </h1>
         <div className="mb4-l cf">
           <article className="fl w-50 dib-ns w-auto-ns mr4-m mr5-l mb4 pr2 pr0-ns">
             <h4 className="color f5 f4-l fw6">SF</h4>

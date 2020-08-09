@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../../Components/Navbar-component/Navbar";
+import Header from "../../Components/Header-component/Header";
+import Footer from "../../Components/Footer-component/Footer";
+import Subscribe from "../../Components/Subscribe-component/Subscribe";
 
 const Signin = () => {
   return (
     <div>
       <div>
-        <Navbar />
+        <Header />
       </div>
       <div>
         <main className="pa4 black-80">
@@ -14,7 +16,11 @@ const Signin = () => {
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
               <legend className="f4 fw6 ph0 mh0">Sign In</legend>
               <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="email-address">
+                <label
+                  style={{ color: "rgb(255, 94, 0)" }}
+                  className="db fw6 lh-copy f6"
+                  htmlFor="email-address"
+                >
                   Email
                 </label>
                 <input
@@ -25,7 +31,11 @@ const Signin = () => {
                 />
               </div>
               <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="password">
+                <label
+                  style={{ color: "rgb(255, 94, 0)" }}
+                  className="db fw6 lh-copy f6"
+                  htmlFor="password"
+                >
                   Password
                 </label>
                 <input
@@ -41,6 +51,7 @@ const Signin = () => {
             </fieldset>
             <div className>
               <input
+                style={{ backgroundColor: "rgb(255, 94, 0)", color: "white" }}
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                 type="submit"
                 defaultValue="Sign in"
@@ -57,6 +68,8 @@ const Signin = () => {
           </form>
         </main>
       </div>
+      <Subscribe />
+      <Footer />
     </div>
   );
 };
