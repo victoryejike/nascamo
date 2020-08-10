@@ -30,7 +30,7 @@ class Blog extends React.Component {
           id: 2,
           postImage: (
             <img
-              src="http://mrmrs.github.io/photos/cpu.jpg"
+              src="http://mrmrs.github.io/photos/whale.jpg"
               alt="firstblogpost"
               width="200px"
               height="200px"
@@ -91,22 +91,6 @@ class Blog extends React.Component {
           postAuthor: "Stanley",
         },
         {
-          id: 5,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/cpu.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin.",
-          postCategory: "Cryptos",
-          postAuthor: "Stanley",
-        },
-        {
           id: 6,
           postImage: (
             <img
@@ -126,7 +110,23 @@ class Blog extends React.Component {
           id: 7,
           postImage: (
             <img
-              src="http://mrmrs.github.io/photos/cpu.jpg"
+              src="http://mrmrs.github.io/photos/whale.jpg"
+              alt="firstblogpost"
+              width="200px"
+              height="200px"
+            />
+          ),
+          postBody:
+            // eslint-disable-next-line
+            "The tech giant says it is ready to begin.",
+          postCategory: "Cryptos",
+          postAuthor: "Stanley",
+        },
+        {
+          id: 8,
+          postImage: (
+            <img
+              src="http://mrmrs.github.io/photos/whale.jpg"
               alt="firstblogpost"
               width="200px"
               height="200px"

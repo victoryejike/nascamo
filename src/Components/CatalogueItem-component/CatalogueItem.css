@@ -1,7 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 .container {
   display: flex;
 }
 
 .catalogue {
   flex: 5;
+}
+
+.catalogueitemcard {
+  /* width: 200px; */
+  height: 260px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  transition: 1s;
+}
+
+.catalogueitemcard:hover {
+  width: 210px;
+  /* height: 265px; */
+}
+
+.categoryName {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400px;
+  padding: 8px;
 }

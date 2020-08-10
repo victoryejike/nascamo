@@ -10,9 +10,10 @@
   color: black;
   text-align: center;
   font-size: 30px;
+  text-shadow: 5px 5px 5px rgb(255, 94, 0);
 }
 
 .line {
   margin: 20px;
-  border-color: rgb(255, 94, 0);
+  color: rgb(255, 94, 0);
 }

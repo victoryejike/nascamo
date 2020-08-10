@@ -3,11 +3,11 @@ import Header from "../../Components/Header-component/Header";
 import CatalogueItem from "../../Components/CatalogueItem-component/CatalogueItem";
 import Subscribe from "../../Components/Subscribe-component/Subscribe";
 import Footer from "../../Components/Footer-component/Footer";
-import Cryptos from "../../assets/cryptos.jpg";
-import TextMesaage from "../../assets/textMessage.jpg";
-import PhoneCall from "../../assets/phoneCall.jpg";
-import Whatsapp from "../../assets/whatsapp.jpg";
-import Email from "../../assets/email.jpg";
+// import Cryptos from "../../assets/cryptos.jpg";
+// import TextMesaage from "../../assets/textMessage.jpg";
+// import PhoneCall from "../../assets/phoneCall.jpg";
+// import Whatsapp from "../../assets/whatsapp.jpg";
+// import Email from "../../assets/email.jpg";
 import "./ScamCatalogue.css";
 
 class ScamCatalogue extends React.Component {
@@ -18,18 +18,23 @@ class ScamCatalogue extends React.Component {
         {
           image: (
             <img
-              src={TextMesaage}
+              src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="message scam"
-              width="160px"
+              width="200px"
               height="160px"
             />
           ),
-          imageText: "Text Message",
+          imageText: "Message",
           articleCount: 12,
         },
         {
           image: (
-            <img src={Email} alt="email scam" width="200px" height="160px" />
+            <img
+              src="http://mrmrs.github.io/photos/whale.jpg"
+              alt="email scam"
+              width="200px"
+              height="160px"
+            />
           ),
           imageText: "Email",
           articleCount: 6,
@@ -37,9 +42,9 @@ class ScamCatalogue extends React.Component {
         {
           image: (
             <img
-              src={Whatsapp}
+              src="http://mrmrs.github.io/photos/whale.jpg"
               alt="whatsapp scam"
-              width="160px"
+              width="200px"
               height="160px"
             />
           ),
@@ -49,9 +54,9 @@ class ScamCatalogue extends React.Component {
         {
           image: (
             <img
-              src={Cryptos}
+              src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="cryptocurrency scam"
-              width="160px"
+              width="200px"
               height="160px"
             />
           ),
@@ -61,9 +66,9 @@ class ScamCatalogue extends React.Component {
         {
           image: (
             <img
-              src={PhoneCall}
+              src="http://mrmrs.github.io/photos/whale.jpg"
               alt="phone Call scam"
-              width="160px"
+              width="200px"
               height="160px"
             />
           ),

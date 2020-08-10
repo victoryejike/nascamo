@@ -38,7 +38,7 @@ a {
   text-decoration: none;
   padding-left: 20px;
   color: white;
-  transition: 2s;
+  transition: 1s;
 }
 
 .navaccessLinks {
@@ -47,5 +47,5 @@ a {
 
 a:hover {
   color: rgb(254, 94, 0);
-  /* height: 200px; */
+  font-size: 18px;
 }
