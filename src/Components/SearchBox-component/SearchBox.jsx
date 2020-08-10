@@ -2,22 +2,25 @@ import React from "react";
 
 const SearchBox = () => {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <input
         style={{
           height: 30,
           width: 200,
           outline: "none",
-          borderColor: "white",
+          borderColor: "rgb(255, 94, 0)",
         }}
-        className="hover-bg-black hover-white w-100"
         type="search"
         name="searchBox"
         placeholder="Search our extensive catalogue"
       />
       <button
-        style={{ height: 30, width: 80 }}
-        className=" no-underline grow pv2 ph3 dib mr3"
+        style={{
+          height: 30,
+          width: 80,
+          backgroundColor: "rgb(255, 94, 0)",
+          borderColor: "rgb(255, 94, 0)",
+        }}
       >
         Search
       </button>

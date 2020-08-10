@@ -1,8 +1,21 @@
 .home {
-  background-color: black;
-  background-image: url("../../assets/homeBackground2.jpg");
-  background-position: center;
+  background-color: white;
+  /* background-image: url("../../assets/homeBackground2.jpg"); */
+  background-position: top;
   background-repeat: repeat;
-  height: 600px;
+  height: 632px;
   background-size: cover;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.scamContainer {
+  width: 80%;
+}
+
+.gistContainer {
+  width: 18%;
 }

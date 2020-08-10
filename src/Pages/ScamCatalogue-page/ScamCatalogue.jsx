@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../../Components/Header-component/Header";
+//import Header from "../../Components/Header-component/Header";
 import CatalogueItem from "../../Components/CatalogueItem-component/CatalogueItem";
-import Subscribe from "../../Components/Subscribe-component/Subscribe";
-import Footer from "../../Components/Footer-component/Footer";
+//import Subscribe from "../../Components/Subscribe-component/Subscribe";
+//import Footer from "../../Components/Footer-component/Footer";
 // import Cryptos from "../../assets/cryptos.jpg";
 // import TextMesaage from "../../assets/textMessage.jpg";
 // import PhoneCall from "../../assets/phoneCall.jpg";
@@ -20,60 +20,60 @@ class ScamCatalogue extends React.Component {
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="message scam"
-              width="200px"
-              height="160px"
+              width="100px"
+              height="80px"
             />
           ),
-          imageText: "Message",
-          articleCount: 12,
+          imageText: "vbgjbigabfbi hbaijb Message",
+          // articleCount: 12,
         },
         {
           image: (
             <img
               src="http://mrmrs.github.io/photos/whale.jpg"
               alt="email scam"
-              width="200px"
-              height="160px"
+              width="100px"
+              height="80px"
             />
           ),
           imageText: "Email",
-          articleCount: 6,
+          //articleCount: 6,
         },
         {
           image: (
             <img
               src="http://mrmrs.github.io/photos/whale.jpg"
               alt="whatsapp scam"
-              width="200px"
-              height="160px"
+              width="100px"
+              height="80px"
             />
           ),
           imageText: "Whatsapp",
-          articleCount: 9,
+          //articleCount: 9,
         },
         {
           image: (
             <img
               src="http://mrmrs.github.io/photos/cpu.jpg"
               alt="cryptocurrency scam"
-              width="200px"
-              height="160px"
+              width="100px"
+              height="80px"
             />
           ),
           imageText: "Cryptos",
-          articleCount: 34,
+          //articleCount: 34,
         },
         {
           image: (
             <img
               src="http://mrmrs.github.io/photos/whale.jpg"
               alt="phone Call scam"
-              width="200px"
-              height="160px"
+              width="100px"
+              height="80px"
             />
           ),
-          imageText: "Phone",
-          articleCount: 34,
+          imageText: "$50 in 1 hour",
+          //articleCount: 34,
         },
       ],
     };
@@ -81,21 +81,20 @@ class ScamCatalogue extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        <p className="catalogueName">Our Catalogue</p>
-        <div className="container">
-          {this.state.catalogueItems.map((catalogueItem) => (
-            <div className="catalogue">
-              <CatalogueItem
-                image={catalogueItem.image}
-                category={catalogueItem.imageText}
-                numberOfArticles={catalogueItem.articleCount}
-              />
-            </div>
-          ))}
+        <p className="catalogueName">Verified Scams</p>
+        <div className="cataloguePadding">
+          <div className="container">
+            {this.state.catalogueItems.map((catalogueItem) => (
+              <div className="catalogue">
+                <CatalogueItem
+                  image={catalogueItem.image}
+                  category={catalogueItem.imageText}
+                  numberOfArticles={catalogueItem.articleCount}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        <Subscribe />
-        <Footer />
       </div>
     );
   }

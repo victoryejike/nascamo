@@ -1,10 +1,12 @@
 import React from "react";
 import Navbar from "../../Components/Navbar-component/Navbar";
-//import Testimonies from "../../Components/Testimonies-component/Testimonies";
-import Poster from "../../Components/Poster-component/Poster";
-import About from "../../Components/About-component/About";
-import Footer from "../../Components/Footer-component/Footer";
-import Subscribe from "../../Components/Subscribe-component/Subscribe";
+import ScamCatalogue from "../ScamCatalogue-page/ScamCatalogue";
+import Hotgist from "../../Components/Hotgist-component/Hotgist";
+import SearchBox from "../../Components/SearchBox-component/SearchBox";
+//import Poster from "../../Components/Poster-component/Poster";
+//import About from "../../Components/About-component/About";
+//import Footer from "../../Components/Footer-component/Footer";
+//import Subscribe from "../../Components/Subscribe-component/Subscribe";
 import "./Home.css";
 
 class Home extends React.Component {
@@ -12,11 +14,21 @@ class Home extends React.Component {
     return (
       <div className="home">
         <Navbar />
-        <Poster />
-        <About />
-        {/* <Testimonies /> */}
-        <Subscribe />
-        <Footer />
+        <SearchBox />
+        <div className="flexContainer">
+          <div className="scamContainer">
+            <ScamCatalogue />
+            <ScamCatalogue />
+          </div>
+          <div className="gistContainer">
+            <Hotgist />
+          </div>
+        </div>
+
+        {/* <Poster /> */}
+        {/* <About />
+        <Subscribe /> */}
+        {/* <Footer /> */}
       </div>
     );
   }

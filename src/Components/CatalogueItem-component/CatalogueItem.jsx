@@ -1,18 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CatalogueItem.css";
 
 const CatalogueItem = (props) => {
   const { image, category, numberOfArticles } = props;
   return (
     <div>
-      <div className="catalogueitemcard">
-        {image}
-        <br></br>
-        <div className="categoryName">
-          <p>Category: {category}</p>
-          <p>Article Number: {numberOfArticles}</p>
+      <Link className="nascamLinks" to="/blog">
+        <div className="catalogueitemcard">
+          {image}
+          <br></br>
+          <div className="categoryName">
+            <p>{category}</p>
+            <p>{numberOfArticles}</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

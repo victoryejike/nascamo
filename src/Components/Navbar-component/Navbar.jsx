@@ -10,13 +10,19 @@ const Navbar = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">home</Link>
+              <Link className="navLinks" to="/">
+                home
+              </Link>
             </li>
             <li>
-              <Link to="/blog">blog</Link>
+              <Link className="navLinks" to="/blog">
+                blog
+              </Link>
             </li>
             <li>
-              <Link to="/scamcatalogue">catalogue</Link>
+              <Link className="navLinks" to="/scamcatalogue">
+                catalogue
+              </Link>
             </li>
           </ul>
         </nav>
@@ -25,10 +31,14 @@ const Navbar = () => {
         <nav className="navaccessLinks">
           <ul>
             <li>
-              <Link to="/signin">sign in</Link>
+              <Link className="navLinks" to="/signin">
+                sign in
+              </Link>
             </li>
             <li>
-              <Link to="/signup">join</Link>
+              <Link className="navLinks" to="/signup">
+                join
+              </Link>
             </li>
           </ul>
         </nav>
