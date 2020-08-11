@@ -1,169 +1,37 @@
 import React from "react";
-import Header from "../../Components/Header-component/Header";
+import Navbar from "../../Components/Navbar-component/Navbar";
 import BlogItem from "../../Components/BlogItem-component/BlogItem";
+import { connect } from "react-redux";
+import { fetchPosts } from "../../actions/postsAction";
 import Subscribe from "../../Components/Subscribe-component/Subscribe";
 import Footer from "../../Components/Footer-component/Footer";
 import "./Blog.css";
 
 class Blog extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      blogItems: [
-        {
-          id: 1,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/cpu.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin.",
-          postCategory: "Text Message",
-          postAuthor: "Stanley",
-        },
-        {
-          id: 2,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/whale.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin",
-          postCategory: "Whatsapp",
-          postAuthor: "Erica",
-        },
-        {
-          id: 3,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/cpu.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin.",
-          postCategory: "Email",
-          postAuthor: "TolaniBaj",
-        },
-        {
-          id: 4,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/cpu.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin.",
-          postCategory: "Phone Call",
-          postAuthor: "Kennedy",
-        },
-        {
-          id: 5,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/cpu.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin .",
-          postCategory: "Cryptos",
-          postAuthor: "Stanley",
-        },
-        {
-          id: 6,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/cpu.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin.",
-          postCategory: "Cryptos",
-          postAuthor: "Stanley",
-        },
-        {
-          id: 7,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/whale.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin.",
-          postCategory: "Cryptos",
-          postAuthor: "Stanley",
-        },
-        {
-          id: 8,
-          postImage: (
-            <img
-              src="http://mrmrs.github.io/photos/whale.jpg"
-              alt="firstblogpost"
-              width="200px"
-              height="200px"
-            />
-          ),
-          postBody:
-            // eslint-disable-next-line
-            "The tech giant says it is ready to begin",
-          postCategory: "Cryptos",
-          postAuthor: "Sandro Willy",
-        },
-      ],
-    };
+  componentDidMount() {
+    this.props.fetchPosts();
   }
   render() {
+    const postItems = this.props.posts.map((post) => (
+      <BlogItem postId={post.id} title={post.title} postBody={post.body} />
+    ));
+
     return (
-      <div>
-        <Header />
-        <p className="blogName">Blog</p>
+      <section>
+        <Navbar />
+        <h2 className="blogName">Blog</h2>
         <div className="container2">
-          {this.state.blogItems.map((blogItem) => (
-            <div className="blogPost2">
-              <BlogItem
-                className="blog"
-                image={blogItem.postImage}
-                article={blogItem.postBody}
-                category={blogItem.postCategory}
-                author={blogItem.postAuthor}
-              />
-            </div>
-          ))}
+          <div className="blogPost2">{postItems}</div>
         </div>
         <Subscribe />
         <Footer />
-      </div>
+      </section>
     );
   }
 }
 
-export default Blog;
+const mapStateToProps = (state) => ({
+  posts: state.posts,
+});
+
+export default connect(mapStateToProps, { fetchPosts })(Blog);

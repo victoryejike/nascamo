@@ -87,6 +87,7 @@ class ScamCatalogue extends React.Component {
             {this.state.catalogueItems.map((catalogueItem) => (
               <div className="catalogue">
                 <CatalogueItem
+                  catalogueId={catalogueItem.id}
                   image={catalogueItem.image}
                   category={catalogueItem.imageText}
                   numberOfArticles={catalogueItem.articleCount}
