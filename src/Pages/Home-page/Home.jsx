@@ -10,8 +10,9 @@ import { fetchComments } from "../../actions/commentsActions";
 //import Footer from "../../Components/Footer-component/Footer";
 //import Subscribe from "../../Components/Subscribe-component/Subscribe";
 import "./Home.css";
+//import BlogItem from "../../Components/BlogItem-component/BlogItem";
 
-const Home = ({ loading, match, dispatch, hasErrors, comments }) => {
+const Home = ({ loading, match, dispatch, hasErrors, posts, comments }) => {
   useEffect(() => {
     const { id } = match.params;
 
@@ -22,11 +23,11 @@ const Home = ({ loading, match, dispatch, hasErrors, comments }) => {
   const renderComments = () => {
     if (loading.comments) return <p>Loading comments...</p>;
     if (hasErrors.comments) return <p>Unable to display comments.</p>;
-
     return comments.map((comment) => (
       <Hotgist key={comment.id} comment={comment} />
     ));
   };
+
   return (
     <div className="home">
       <Navbar />
@@ -48,7 +49,7 @@ const Home = ({ loading, match, dispatch, hasErrors, comments }) => {
 };
 
 const mapStateToProps = (state) => ({
-  //post: state.post.post,
+  post: state.posts.posts,
   comments: state.comments.comments,
   loading: { comments: state.comments.loading },
   hasErrors: { comments: state.comments.hasErrors },

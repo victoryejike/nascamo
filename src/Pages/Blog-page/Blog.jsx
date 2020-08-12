@@ -21,9 +21,9 @@ const Blog = ({ dispatch, loading, posts, hasErrors }) => {
     <section>
       <Navbar />
       <h2 className="blogName">Blog</h2>
-      <div className="container2">
-        <div className="blogPost2">{renderPosts()}</div>
-      </div>
+
+      <div className="blogPost2">{renderPosts()}</div>
+
       <Subscribe />
       <Footer />
     </section>

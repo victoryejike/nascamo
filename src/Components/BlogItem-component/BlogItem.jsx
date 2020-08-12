@@ -7,45 +7,37 @@ import { Link } from "react-router-dom";
 const BlogItem = ({ post, excerpt }) => {
   return (
     <article
-      style={{
-        textAlign: "justify",
-        backgroundImage: "grey",
-        margin: 10,
-        width: "80%",
-      }}
-      className={excerpt ? "post-excerpt" : "post"}
+      className="bg-white center mw5 ba b--black-10 mv4"
+      id={excerpt ? "post-excerpt" : "post"}
     >
-      <div style={{ padding: 10 }}>
-        <h2>{post.title}</h2>
+      <div class="pv2 ph3">
+        <h1 className="f6 ttu tracked">{post.title}</h1>
+      </div>
+      <img
+        src="http://tachyons.io/img/cat-720.jpg"
+        className="w-100 db"
+        alt="Closeup of a tabby cat yawning."
+      ></img>
+      <div className="pa3">
         <p>{excerpt ? post.body.substring(0, 100) : post.body}</p>
-
         <Link
           to={`/blog/${post.id}`}
           style={{
-            backgroundColor: "pink",
-            color: "black",
+            padding: 5,
+            backgroundColor: "black",
+            color: "rgb(255, 94, 0)",
             textDecoration: "none",
           }}
           className="button"
         >
           View Post
         </Link>
+        <small className="gray db pv2">
+          AMP - <time>6 hours ago</time>
+        </small>
       </div>
     </article>
   );
 };
-
-// export const Post = ({ post, excerpt }) => (
-//   <article className={excerpt ? 'post-excerpt' : 'post'}>
-//     <h2>{post.title}</h2>
-//     <p>{excerpt ? post.body.substring(0, 100) : post.body}</p>
-
-//     {excerpt && (
-//       <Link to={`/posts/${post.id}`} className="button">
-//         View Post
-//       </Link>
-//     )}
-//   </article>
-// )
 
 export default BlogItem;

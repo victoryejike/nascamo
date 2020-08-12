@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-.container2 {
+/* .container2 {
+  
+} */
+
+.blogPost2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.blogPost2 {
-  align-items: flex-start;
 }
 
 .blog {
