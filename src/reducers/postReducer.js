@@ -1,19 +1,20 @@
-import { GET_POST } from "../actions/types";
+import * as actions from "../actions/postActions";
 
-const initialState = {
-  post: [],
-  loading: false,
+export const initialState = {
+  loading: true,
   hasErrors: false,
+  post: {},
 };
 
-const postReducer = (state = initialState, action) => {
+export default function postReducer(state = initialState, action) {
   switch (action.type) {
-    case GET_POST:
-      console.log("reducer");
-      return { ...state, post: action.payload };
+    case actions.GET_POST:
+      return { ...state, loading: true };
+    case actions.GET_POST_SUCCESS:
+      return { post: action.payload, loading: false, hasErrors: false };
+    case actions.GET_POST_FAILURE:
+      return { ...state, loading: false, hasErrors: true };
     default:
       return state;
   }
-};
-
-export default postReducer;
+}

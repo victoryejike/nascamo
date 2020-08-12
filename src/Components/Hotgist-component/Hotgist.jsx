@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hotgist = () => {
+const Hotgist = ({ comment }) => {
   return (
     <div
       style={{
@@ -11,10 +11,13 @@ const Hotgist = () => {
         overflowY: "scroll",
       }}
     >
-      <h2>Topic of the day</h2>
-      <img src="" alt="topic of the day" />
-      <h3>Title</h3>
-      <div>Comment Section</div>
+      <aside className="comment">
+        <h1>Topic of the day</h1>
+        <h2>{comment.title}</h2>
+        <h3>{comment.email}</h3>
+        <p>{comment.body}</p>
+      </aside>
+      )
     </div>
   );
 };

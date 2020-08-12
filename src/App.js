@@ -7,7 +7,7 @@ import Blog from "../src/Pages/Blog-page/Blog";
 import ScamCatalogue from "./Pages/ScamCatalogue-page/ScamCatalogue";
 import Signin from "../src/Pages/Signin-page/Signin";
 import Signup from "./Pages/Signup-page/Signup";
-import SingleBlogPost from "./Pages/SingleBlogPost-component/SingleBlogPost";
+import SingleBlogPost from "../src/Pages/SingleBlogPost-component/SingleBlogPost";
 //import Loader from "../src/Components/Loader-component/Loader";
 //import Particles from "react-particles-js";
 
@@ -33,7 +33,7 @@ class App extends React.Component {
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
           <Route path="/blog" component={Blog} />
-          <Route path="/blog/:blogPostId" component={SingleBlogPost} />
+          <Route path="/blog/:id" component={SingleBlogPost} />
           <Route path="/scamcatalogue" component={ScamCatalogue} />
         </Switch>
       </div>

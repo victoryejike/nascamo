@@ -1,37 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../Components/Navbar-component/Navbar";
 import BlogItem from "../../Components/BlogItem-component/BlogItem";
 import { connect } from "react-redux";
-import { fetchPosts } from "../../actions/postsAction";
+import { fetchPosts } from "../../actions/postsActions";
 import Subscribe from "../../Components/Subscribe-component/Subscribe";
 import Footer from "../../Components/Footer-component/Footer";
 import "./Blog.css";
 
-class Blog extends React.Component {
-  componentDidMount() {
-    this.props.fetchPosts();
-  }
-  render() {
-    const postItems = this.props.posts.map((post) => (
-      <BlogItem postId={post.id} title={post.title} postBody={post.body} />
-    ));
+const Blog = ({ dispatch, loading, posts, hasErrors }) => {
+  useEffect(() => {
+    dispatch(fetchPosts());
+  }, [dispatch]);
 
-    return (
-      <section>
-        <Navbar />
-        <h2 className="blogName">Blog</h2>
-        <div className="container2">
-          <div className="blogPost2">{postItems}</div>
-        </div>
-        <Subscribe />
-        <Footer />
-      </section>
-    );
-  }
-}
-
+  const renderPosts = () => {
+    if (loading) return <p>Loading posts...</p>;
+    if (hasErrors) return <p>Unable to display posts.</p>;
+    return posts.map((post) => <BlogItem key={post.id} post={post} />);
+  };
+  return (
+    <section>
+      <Navbar />
+      <h2 className="blogName">Blog</h2>
+      <div className="container2">
+        <div className="blogPost2">{renderPosts()}</div>
+      </div>
+      <Subscribe />
+      <Footer />
+    </section>
+  );
+};
 const mapStateToProps = (state) => ({
-  posts: state.posts,
+  loading: state.posts.loading,
+  posts: state.posts.posts,
+  hasErrors: state.posts.hasErrors,
 });
 
-export default connect(mapStateToProps, { fetchPosts })(Blog);
+export default connect(mapStateToProps)(Blog);
