@@ -33,7 +33,7 @@ class App extends React.Component {
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
           <Route path="/blog" component={Blog} />
-          <Route path="/blog/:id" component={SingleBlogPost} />
+          <Route exact path="/singleblog/:id" component={SingleBlogPost} />
           <Route path="/scamcatalogue" component={ScamCatalogue} />
         </Switch>
       </div>

@@ -1,5 +1,5 @@
 .home {
-  background-color: white;
+  background-color: rgb(248, 242, 242);
   /* background-image: url("../../assets/homeBackground2.jpg"); */
   background-position: top;
   background-repeat: repeat;
@@ -9,13 +9,15 @@
 
 .flexContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin: 15px;
+  padding-right: 10px;
 }
 
-.scamContainer {
+/* .scamContainer {
   width: 80%;
 }
 
 .gistContainer {
   width: 18%;
-}
+} */

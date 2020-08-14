@@ -7,10 +7,16 @@ import Subscribe from "../../Components/Subscribe-component/Subscribe";
 import Footer from "../../Components/Footer-component/Footer";
 import "./Blog.css";
 
-const Blog = ({ dispatch, loading, posts, hasErrors }) => {
+const Blog = ({ dispatch, match, loading, posts, hasErrors }) => {
+  console.log(dispatch);
   useEffect(() => {
     dispatch(fetchPosts());
   }, [dispatch]);
+
+  // const pickpost = (id) => {
+  //   let find = posts.filter((cur, i) => cur.id === id);
+  //   console.log(find);
+  // };
 
   const renderPosts = () => {
     if (loading) return <p>Loading posts...</p>;

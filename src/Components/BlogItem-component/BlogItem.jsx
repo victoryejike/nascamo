@@ -1,16 +1,18 @@
 import React from "react";
+//import {Route} from 'react-router-dom'
 import { Link } from "react-router-dom";
 //import { connect } from "react-redux";
 
 //import "./Testimony.css";
 
-const BlogItem = ({ post, excerpt }) => {
+const BlogItem = ({ key, post, excerpt }) => {
+  // console.log(post);
   return (
     <article
       className="bg-white center mw5 ba b--black-10 mv4"
       id={excerpt ? "post-excerpt" : "post"}
     >
-      <div class="pv2 ph3">
+      <div className="pv2 ph3">
         <h1 className="f6 ttu tracked">{post.title}</h1>
       </div>
       <img
@@ -20,8 +22,10 @@ const BlogItem = ({ post, excerpt }) => {
       ></img>
       <div className="pa3">
         <p>{excerpt ? post.body.substring(0, 100) : post.body}</p>
+
         <Link
-          to={`/blog/${post.id}`}
+          // onClick={(id) => pickpost(id)}
+          to={`/singleblog/${post.id}`}
           style={{
             padding: 5,
             backgroundColor: "black",
@@ -32,6 +36,7 @@ const BlogItem = ({ post, excerpt }) => {
         >
           View Post
         </Link>
+
         <small className="gray db pv2">
           AMP - <time>6 hours ago</time>
         </small>
