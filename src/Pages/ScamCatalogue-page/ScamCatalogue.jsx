@@ -1,13 +1,8 @@
 import React from "react";
-//import Header from "../../Components/Header-component/Header";
+import Navbar from "../../Components/Navbar-component/Navbar";
 import CatalogueItem from "../../Components/CatalogueItem-component/CatalogueItem";
-//import Subscribe from "../../Components/Subscribe-component/Subscribe";
-//import Footer from "../../Components/Footer-component/Footer";
-// import Cryptos from "../../assets/cryptos.jpg";
-// import TextMesaage from "../../assets/textMessage.jpg";
-// import PhoneCall from "../../assets/phoneCall.jpg";
-// import Whatsapp from "../../assets/whatsapp.jpg";
-// import Email from "../../assets/email.jpg";
+import Subscribe from "../../Components/Subscribe-component/Subscribe";
+import Footer from "../../Components/Footer-component/Footer";
 import "./ScamCatalogue.css";
 
 class ScamCatalogue extends React.Component {
@@ -81,7 +76,8 @@ class ScamCatalogue extends React.Component {
   render() {
     return (
       <div>
-        <p className="catalogueName">Verified Scams</p>
+        <Navbar />
+        <p className="catalogueName">Catalogue</p>
         <div className="cataloguePadding">
           <div className="container">
             {this.state.catalogueItems.map((catalogueItem) => (
@@ -96,6 +92,8 @@ class ScamCatalogue extends React.Component {
             ))}
           </div>
         </div>
+        <Subscribe />
+        <Footer />
       </div>
     );
   }
